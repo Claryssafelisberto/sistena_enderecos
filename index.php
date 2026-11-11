@@ -13,11 +13,11 @@ if(isset($_GET['cep'])){
 
 ?>
 
-<form action="GET">
+<form method="GET">
 <input
 type= "text"
 placeholder="Buscar Cep..."
-name="name"
+name="cep"
 
 >
 <button>Buscar</button>
@@ -31,11 +31,20 @@ name="name"
     <ul>
     <?php
     foreach($endereco as $data => $valor){
-        if(strlen($valor) > 0)
+        if(strlen($valor) > 0){
         echo "$data: $valor <br>";
+       
+
+    }
     }
     ?>
     </ul>
-
+    <form action="salvar.php" method="POST">
+        <input type="hidden" name="cep" value="<?php echo htmlspecialchars($_GET['cep']) ?> ">
+        <button>Salvar</button>
+</form>
 </div>
+<?php elseif(isset($endereco['erro'])):?>
+<h2>CEP nao encontrado</h2>
+<p>O cep ditado pelo usuario nao existe</p>
 <?php endif;?>
