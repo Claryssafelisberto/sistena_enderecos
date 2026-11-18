@@ -40,7 +40,7 @@ name="cep"
     ?>
     </ul>
     <form action="salvar.php" method="POST">
-        <input type="hidden" name="cep" value="<?php echo htmlspecialchars($_GET['cep']) ?> ">
+        <input type="hidden" name="cep" value="<?php echo htmlspecialchars($_GET['cep'])?>">
         <button>Salvar</button>
 </form>
 </div>
