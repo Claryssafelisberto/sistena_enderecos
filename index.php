@@ -48,3 +48,5 @@ name="cep"
 <h2>CEP nao encontrado</h2>
 <p>O cep ditado pelo usuario nao existe</p>
 <?php endif;?>
+
+<a href="lista.php">Ver todos os cep</a>
